@@ -1,7 +1,8 @@
+import { env } from "../config.json"
 import { Command } from "../functions/tools"
 import { Client, Message, MessageEmbed } from "discord.js"
 const sagiri = require('sagiri');
-const client = sagiri('6adaebd1f82d5a47efaa57d4347bbc7a71b45cf8', { results: 5 });
+const client = sagiri(env.saucenao, { results: 5 });
 
 export const command: Command = {
     name: "sauce",
