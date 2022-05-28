@@ -71,7 +71,7 @@ export const command: Command = {
                     position: {
                         x: resolution[0] / 14,
                         y: 500,
-                        size: 65,
+                        size: 70,
                         align: "left"
                     }
                 },
@@ -80,7 +80,7 @@ export const command: Command = {
                     position: {
                         x: resolution[0] / 1.1,
                         y: 500,
-                        size: 65,
+                        size: 70,
                         align: "right"
                     }
                 },
