@@ -3,3 +3,15 @@
 
 Install npm and node and run `installdependencies.bat`.
 After that, run `start.bat`.
+
+`config.json` is a vital part of this bot. It consists of:
+```
+{
+    "env": {
+        "prefix": "[insert prefix]",
+        "token": "[bot token]",
+        "saucenao": "[saucenao API]"
+    }
+}
+
+```
