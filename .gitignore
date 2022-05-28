@@ -1,3 +1,5 @@
 node_modules
 src/config.json
 src/general.stormdb
+package.json
+package-lock.json
