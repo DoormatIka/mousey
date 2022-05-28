@@ -35,7 +35,7 @@ export const command: Command = {
                     return msg.reply("A bit too much. `0 to 1`")
                 }
             } else {
-                parsed.darkvalue = 0.3
+                parsed.darkvalue = 0.75
             }
 
 
