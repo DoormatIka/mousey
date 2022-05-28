@@ -22,7 +22,6 @@
     "brain.js": "^2.0.0-beta.15",
     "cryptr": "^6.0.3",
     "discord.js": "^13.6.0",
-    "googlethis": "^1.2.9",
     "sagiri": "^3.1.1",
     "sharp": "^0.30.4",
     "stormdb": "^0.6.0",
