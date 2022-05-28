@@ -1,8 +1,7 @@
-# Aegleseeker
-### Mousey V2
+# Aegleseeker | Mousey v2
 
-Install npm and node and run `installdependencies.bat`.
-After that, run `start.bat`.
+### Instructions for running.
+Install npm and node and run `installdependencies.bat`. After that, run `start.bat`.
 
 `./src/config.json` is a vital part of this bot. It consists of:
 ```
