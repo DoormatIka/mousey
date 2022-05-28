@@ -1,6 +1,5 @@
 import { Intents, Client, Collection, Message } from "discord.js"
 import * as fs from "fs"
-import * as _ from 'lodash';
 
 import { env } from "./config.json";
 
