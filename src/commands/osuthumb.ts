@@ -25,11 +25,12 @@ export const command: Command = {
                 combo: matched_arguments[4],
                 mods: matched_arguments[5],
                 bglink: matched_arguments[6],
+                str_darkvalue: matched_arguments[7],
                 darkvalue: 0.0
             };
 
 
-            if (matched_arguments[7]) {
+            if (parsed.str_darkvalue) {
                 parsed.darkvalue = parseFloat(matched_arguments[7]);
                 if ( parsed.darkvalue < 0 || parsed.darkvalue > 1 ) {
                     return msg.reply("A bit too much. `0 to 1`")
@@ -39,13 +40,16 @@ export const command: Command = {
             }
 
 
-            const resolution: [number, number] = [1280, 720];
+            const resolution = {
+                x: 1280,
+                y: 720
+            }
 
             const text: Text[] = [
                 {
                     text: parsed.player,
                     position: {
-                        x: resolution[0] / 2,
+                        x: resolution.x / 2,
                         y: 100,
                         size: 55
                     }
@@ -53,7 +57,7 @@ export const command: Command = {
                 {
                     text: parsed.title,
                     position: {
-                        x: resolution[0] / 2,
+                        x: resolution.x / 2,
                         y: 250,
                         size: 80
                     }
@@ -61,7 +65,7 @@ export const command: Command = {
                 {
                     text: parsed.diffname,
                     position: {
-                        x: resolution[0] / 2,
+                        x: resolution.x / 2,
                         y: 320,
                         size: 60
                     }
@@ -69,7 +73,7 @@ export const command: Command = {
                 {
                     text: parsed.accuracy,
                     position: {
-                        x: resolution[0] / 14,
+                        x: resolution.x / 14,
                         y: 500,
                         size: 70,
                         align: "left"
@@ -78,7 +82,7 @@ export const command: Command = {
                 {
                     text: parsed.combo,
                     position: {
-                        x: resolution[0] / 1.1,
+                        x: resolution.x / 1.1,
                         y: 500,
                         size: 70,
                         align: "right"
@@ -87,7 +91,7 @@ export const command: Command = {
                 {
                     text: parsed.mods,
                     position: {
-                        x: resolution[0] / 2,
+                        x: resolution.x / 2,
                         y: 600,
                         size: 75
                     }
@@ -96,7 +100,7 @@ export const command: Command = {
 
             try {
                 if (parsed.bglink) {
-                    const { canvas } = await combineImages(parsed.bglink, text, undefined, resolution, parsed.darkvalue);
+                    const { canvas } = await combineImages(parsed.bglink, text, undefined, [resolution.x, resolution.y], parsed.darkvalue);
                     const pngBuffer = canvas.toBuffer('image/png', { compressionLevel: 2, filters: canvas.PNG_FILTER_NONE });
                     msg.reply({ files: [pngBuffer] })
                 } else {
