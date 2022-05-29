@@ -3,6 +3,8 @@
 ### Instructions for running.
 Install npm from this site: https://nodejs.org/en/download/
 
+Download the entire project.
+
 Run `installdependencies.bat`. After that, run `start.bat`.
 
 `./src/config.json` is a vital part of this bot. It consists of:
