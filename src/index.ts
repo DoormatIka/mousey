@@ -21,7 +21,7 @@ bot.on("ready", async () => {
     })
 
     await bot.guilds.fetch();
-    console.log(`Logged in as ${bot.user!.tag}.`);
+    console.log(`Logged in as ${bot.user!.tag}!`);
 });
 
 bot.on("messageCreate", async (msg: Message) => {
